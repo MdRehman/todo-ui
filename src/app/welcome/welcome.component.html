@@ -1,11 +1,24 @@
-
 <h1>Welcome to todoApplication</h1>
+
+<div class="alert alert-warning" *ngIf='errorMessage'>{{errorMessage}}</div>
+
 
 <div class="container">
         Welcome {{name}}, to in28minutes
-
         <br>
-        
         You can navigate to your todo List <a routerLink='/todos'>here</a>
+</div>
+
+<div class="container">
+        <button (click)='getHelloWorldData()' class="btn btn-success">Get Bean</button>
+</div>
+
+<div class="container">
+        <button (click)='getHelloWorldName()' class="btn btn-success">Change Name</button>
+</div>
+
+<div class="container" *ngIf='welcomeMessageFromBackEnd'>
+        <h2>My Custum Message From BackEnd</h2>
+        {{welcomeMessageFromBackEnd}}
 
 </div>

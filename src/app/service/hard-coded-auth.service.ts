@@ -18,7 +18,7 @@ export class HardCodedAuthService {
 
   isUserLoggedIn() {
     let user = sessionStorage.getItem('authenticatedUser');
-    return !(user == null)
+    return !(user === null)
   }
 
   logout(){
